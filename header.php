@@ -25,18 +25,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 <body <?php body_class(); ?>>
 
 <div class="site" id="page">
-
+      <?php if(is_front_page()){ ?>
       <div class="container-fluid top-bar">
-
           <div class="container">
             <div class=" row">
               <div class="col-12 text-center ">
-                <p>Upcoming performance of "Barry v Kelly" - <a href="/productions" >find out more.</a></p>
+                <p><?php the_field('top_bar') ?><a href="<?php the_field('top_bar_link')?>"> Find out more.</a></p>
               </div>
             </div>
-        
         </div>
       </div>
+      <?php } ?>
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
