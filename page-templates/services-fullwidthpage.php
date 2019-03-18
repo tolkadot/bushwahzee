@@ -35,9 +35,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper wrapper-md pt-0">
   <div class="container">
     <div class="row t-mb-50">
-      <div class="col-12 text-center"> <h2 class="d-flex justify-content-center section-header t-mb-30">  <?php the_sub_field('service_title'); ?></h2></div>
+      <div class="col-12 text-center">
+        <h2 class="d-flex justify-content-center section-header t-mb-30">
+        <?php the_sub_field('service_title'); ?>
+        </h2>
+      </div>
       <div class="col-md-12">
         <?php the_sub_field('service_description') ?>
+        <p class=" text-center"><a class='bush-button' href="/contact">Book Now</a></p>
       </div>
     </div>
   </div>
