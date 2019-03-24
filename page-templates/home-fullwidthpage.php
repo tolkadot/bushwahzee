@@ -44,6 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 $rows = get_field('team_members', 'option' ); // get all the rows
                 $first_row = $rows[0]; // get the first row
                 $felix_email = $first_row['email'];
+                $paul_row = $rows[1];
                 endif; ?>
                 <?php $bush_facebook = get_field('bushwahzee_facebook', 'option' ); ?>
                 <?php if($bush_facebook) { ?>
@@ -66,29 +67,50 @@ $container = get_theme_mod( 'understrap_container_type' );
                   <div class="col-12">
                   <h2 class="d-flex justify-content-center section-header t-mb-30">Services</h2>
                   </div>
-                  <div class="col-xl-3 col-md-6 services-pod">
-                    <?php if ( is_active_sidebar( 'homepage_services_1' ) ) : ?>
-		                  <?php dynamic_sidebar( 'homepage_services_1' ); ?>
-                    <?php endif; ?>
-                  </div>
-                  <div class="col-xl-3 col-md-6 services-pod">
+
+                  <div class="col-xl-4 services-pod">
                     <?php if ( is_active_sidebar( 'homepage_services_2' ) ) : ?>
 		                  <?php dynamic_sidebar( 'homepage_services_2' ); ?>
                     <?php endif; ?>
                   </div>
-                  <div class="col-xl-3 col-md-6 services-pod">
+                  <div class="col-xl-4 services-pod">
                     <?php if ( is_active_sidebar( 'homepage_services_3' ) ) : ?>
 		                  <?php dynamic_sidebar( 'homepage_services_3' ); ?>
                     <?php endif; ?>
                   </div>
-                    <div class="col-xl-3 col-md-6 services-pod">
+                    <div class="col-xl-4 services-pod">
                       <?php if ( is_active_sidebar( 'homepage_services_4' ) ) : ?>
   		                  <?php dynamic_sidebar( 'homepage_services_4' ); ?>
                       <?php endif; ?>
                     </div>
                 </div>
               </div>
-</div>
+      </div>
+
+          <div class="wrapper  wrapper-md wrapper-highlight">
+           <div class="container">
+              <div class="row t-mb-50 t-mt-50">
+                <div class="offset-md-2 col-md-4 d-flex flex-column justify-content-around">
+                    <h3 class="section-header t-mb-30"><?php the_field('paul') ?></h3>
+                    <?php the_field('paul_caption') ?>
+                    <?php $paul_email = $paul_row['email']; ?>
+                    <?php $paul_phone =  $paul_row['phone'] ?>
+                    <?php if($paul_email) { ?>
+                    <p class="d-flex justify-content-start mb-0"><span class="bold">email &nbsp</span> | <a href="mailto:<?php echo $paul_email ?>"><span class="">&nbsp;<?php echo $paul_email ?></span></a></p>
+                    <?php } ?>
+                    <?php if($paul_phone) { ?>
+                    <p class="d-flex justify-content-start"><span class="bold">phone &nbsp</span>|  <a href="tel:<?php echo $paul_phone ?>"><span class="">&nbsp;<?php echo $paul_phone ?></span></a></p>
+                    <?php } ?>
+                    <p><a class='bush-button' href="<?php the_field('paul_link')?>">Book Now</a></p>
+                </div>
+                <div class="col-md-4">
+                 <a href="<?php the_field('paul_link') ?>"></a><img src="<?php $paul_photo=get_field('paul_photo');echo $paul_photo['url']; ?>" alt="<?php echo $paul_photo['alt']; ?>" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
 <div class="wrapper  wrapper-md">
               <div class="container">
                 <div class="row t-mb-50 t-mt-50">

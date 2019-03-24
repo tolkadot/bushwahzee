@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="container">
             <div class=" row">
               <div class="col-12 text-center ">
-                <p><?php the_field('top_bar') ?><a href="<?php the_field('top_bar_link')?>"> Find out more.</a></p>
+                <p><?php the_field('top_bar') ?><a href="<?php the_field('top_bar_link')?>"> Find out More</a></p>
               </div>
             </div>
         </div>
