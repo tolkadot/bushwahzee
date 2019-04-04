@@ -34,7 +34,6 @@ $understrap_includes = array(
   '/events-cal.php',                      // Load deprecated functions.
 );
 
-
 foreach ( $understrap_includes as $file ) {
 	$filepath = locate_template( 'inc' . $file );
 	if ( ! $filepath ) {
@@ -43,9 +42,8 @@ foreach ( $understrap_includes as $file ) {
 	require_once $filepath;
 }
 
-
-add_action( 'admin_bar_menu', 'show_template' );
-function show_template() {
-global $template;
-print_r( $template );
-}
+// add_action( 'admin_bar_menu', 'show_template' );
+// function show_template() {
+// global $template;
+// print_r( $template );
+// }
