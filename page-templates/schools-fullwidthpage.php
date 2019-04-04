@@ -85,15 +85,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 	       <div><img src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt']; ?>" /></div>
         <?php endif; ?>
       </div>
-      <div class="col-12">
-        <div class="sep-wrapper "><hr class="schools-sep"></div></div>
-      <div class="col-12 text-center"> <p><?php the_field("program_details") ?></p><div class="d-flex justify-content-center"><a class="bush-button" href="/contact">Contact Now</a></div></div>
+      </div>
+  </div>
+</div>
+
+<div class="wrapper wrapper-md wrapper-light">
+  <div class="container">
+    <div class="row t-mb-50 t-mt-50">
+      <div class="col-12 text-center"> <h2 class="d-flex justify-content-center section-header t-mb-30">  <?php the_field("contract_title") ?></h2></div>
+        <p><?php the_field("program_details") ?></p>
     </div>
   </div>
 </div>
 
 
-<div class="wrapper wrapper-md wrapper-light">
+
+<div class="wrapper wrapper-md ">
   <div class="container">
     <div class="row t-mb-50 t-mt-50">
       <div class="col-12 text-center"> <h2 class="d-flex justify-content-center section-header t-mb-30">  <?php the_field("outside_title") ?></h2></div>
@@ -111,7 +118,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div>
 </div>
 
-<div class="wrapper wrapper-md ">
+<div class="wrapper wrapper-md wrapper-light ">
   <div class="container">
     <div class="row t-mb-50 t-mt-50">
       <div class="col-12 text-center"> <h2 class="d-flex justify-content-center section-header t-mb-30">  <?php the_field("checklist_title") ?></h2></div>
