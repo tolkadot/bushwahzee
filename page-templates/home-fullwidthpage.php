@@ -68,17 +68,17 @@ $container = get_theme_mod( 'understrap_container_type' );
                   <h2 class="d-flex justify-content-center section-header t-mb-30">Services</h2>
                   </div>
 
-                  <div class="col-xl-4 services-pod">
+                  <div class="col-lg-4 services-pod">
                     <?php if ( is_active_sidebar( 'homepage_services_2' ) ) : ?>
 		                  <?php dynamic_sidebar( 'homepage_services_2' ); ?>
                     <?php endif; ?>
                   </div>
-                  <div class="col-xl-4 services-pod">
+                  <div class="col-lg-4 services-pod">
                     <?php if ( is_active_sidebar( 'homepage_services_3' ) ) : ?>
 		                  <?php dynamic_sidebar( 'homepage_services_3' ); ?>
                     <?php endif; ?>
                   </div>
-                    <div class="col-xl-4 services-pod">
+                    <div class="col-lg-4 services-pod">
                       <?php if ( is_active_sidebar( 'homepage_services_4' ) ) : ?>
   		                  <?php dynamic_sidebar( 'homepage_services_4' ); ?>
                       <?php endif; ?>
@@ -192,8 +192,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <?php if( have_rows('team_members', 'option') ):
             while ( have_rows('team_members', 'option') ) : the_row();
-                // display a sub field value
-                //the_sub_field('name', 'option');
                 $name = get_sub_field('name', 'option');
             		$email = get_sub_field('email', 'option');
             		$facebook = get_sub_field('facebook', 'option');
