@@ -154,3 +154,14 @@ function remove_search_widget() {
     unregister_widget('WP_Widget_Search');
 }
 add_action( 'widgets_init', 'remove_search_widget' );
+
+
+/*remove posts from menu */
+function remove_admin_menus() {
+
+   remove_menu_page( 'edit.php' ); // Posts
+
+   remove_menu_page( 'edit-comments.php' ); // Comments
+
+}
+add_action( 'admin_menu', 'remove_admin_menus' );
