@@ -79,7 +79,7 @@ $organizer = tribe_get_organizer();
 
 
 <div class="col-md-4 mb-md-3 mb-sm-2">
-  <?php echo tribe_event_featured_image( null, 'medium' ); ?>
+  <?php echo tribe_event_featured_image( null, 'full' ); ?>
 </div><!-- Event Image -->
 
 <div class="col-md-8 mb-md-3 mb-sm-2">
